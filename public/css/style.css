@@ -3,14 +3,18 @@
 ::after {
   box-sizing: border-box;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
+/* -------------------------------------------------------- General styles */
+/* -------------------------------------------------------- */
 body {
   background: #d3c0aa url(../images/tile.jpg) repeat;
   font-family: sans-serif;
   font-size: 16px;
   overflow-x: hidden;
-  overflow-y: scroll; }
+  overflow-y: scroll;
+}
 
 body::before {
   background: #d3c0aa;
@@ -19,7 +23,8 @@ body::before {
   width: 10px;
   height: 100%;
   top: 0;
-  left: 0; }
+  left: 0;
+}
 
 body::after {
   background: #d3c0aa;
@@ -28,93 +33,140 @@ body::after {
   width: 10px;
   height: 100vh;
   top: 0;
-  right: 0; }
+  right: 0;
+}
 
 h1 {
   font-size: 36px;
-  font-family: 'serif'; }
+  font-family: 'serif';
+}
 
 a {
   text-decoration: none;
   color: #c92134;
-  font-weight: bold; }
-  a.regular_btn {
-    background: #c92134;
-    padding: .5rem 1rem;
-    line-height: 2.5rem;
-    color: #fff; }
-    a.regular_btn:hover {
-      background: #000; }
+  font-weight: bold;
+}
+
+a:hover {
+  background: #000;
+}
+
+a.regular_btn {
+  background: #c92134;
+  padding: .5rem 1rem;
+  line-height: 2.5rem;
+  color: #fff;
+}
 
 img {
-  max-width: 100vw; }
+  max-width: 100vw;
+}
 
 article {
-  padding: 1rem 0; }
-  article p {
-    padding: 1rem 0;
-    line-height: 1.5rem;
-    font-size: .8rem; }
+  padding: 1rem 0;
+}
 
+article p {
+  padding: 1rem 0;
+  line-height: 1.5rem;
+  font-size: .8rem;
+}
+
+/* -------------------------------------------------------- Header styles */
+/* -------------------------------------------------------- */
 header {
   background: url(../images/beurs_logo.svg) no-repeat center center;
   background-size: 250px;
   min-height: 10rem;
-  margin: 1rem 0 0; }
-  header nav ul li #menu_toggle {
-    position: absolute;
-    z-index: 100;
-    top: 1rem;
-    right: 1rem;
-    color: #000; }
-  header nav ul li ul {
-    transition: .6s height ease;
-    height: 0px;
-    overflow: hidden;
-    background: #c92134;
-    position: relative;
-    display: block;
-    top: -1rem;
-    left: 0;
-    width: 100%; }
-    header nav ul li ul.active {
-      height: 450px; }
-    header nav ul li ul a {
-      color: #fff;
-      display: block;
-      width: 100%;
-      padding: 1rem 1rem; }
-      header nav ul li ul a:hover {
-        background: #000; }
+  margin: 1rem 0 0;
+}
 
+/* ------------- Navigation styles */
+/* ------------------------------- */
+nav ul li #menu_toggle {
+  position: absolute;
+  z-index: 100;
+  top: 1rem;
+  right: 1rem;
+  color: #000;
+}
+
+nav ul li ul {
+  transition: .6s height ease;
+  height: 0px;
+  overflow: hidden;
+  background: #c92134;
+  position: relative;
+  display: block;
+  top: -1rem;
+  left: 0;
+  width: 100%;
+}
+
+nav ul li ul.active {
+  height: 450px;
+}
+
+nav ul li ul a {
+  color: #fff;
+  display: block;
+  width: 100%;
+  padding: 1rem 1rem;
+}
+
+nav ul li ul a:hover {
+  background: #000;
+}
+
+/* -------------------------------------------------------- Main styles */
+/* -------------------------------------------------------- */
 main {
-  padding: 1rem; }
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
+/* ------------- Bier ranking styles */
+/* --------------------------------- */
 section#bier_ranking {
   background: #e3d9d2;
   border-left: 0.5rem solid #c92134;
   padding: 1rem;
-  margin: 2rem 0; }
-  section#bier_ranking::after {
-    content: '';
-    height: 50px;
-    width: 50vw;
-    border-bottom: 5px dotted #c92134; }
-  section#bier_ranking ol {
-    counter-reset: item;
-    list-style: none;
-    margin: 1rem 0; }
-    section#bier_ranking ol li {
-      line-height: 1.85rem;
-      font-weight: bold;
-      font-size: .85rem; }
-      section#bier_ranking ol li::before {
-        content: counter(item) ". ";
-        counter-increment: item;
-        color: #c92134;
-        font-weight: bold;
-        width: 1.85rem;
-        display: inline-block;
-        font-family: 'serif'; }
-      section#bier_ranking ol li span {
-        font-weight: normal; }
+  margin: 2rem 0;
+}
+
+section#bier_ranking::after {
+  content: '';
+  height: 50px;
+  width: 50vw;
+  border-bottom: 5px dotted #c92134;
+}
+
+section#bier_ranking ol {
+  counter-reset: item;
+  list-style: none;
+  margin: 1rem 0;
+}
+
+section#bier_ranking ol li {
+  line-height: 1.85rem;
+  font-weight: bold;
+  font-size: .85rem;
+}
+
+section#bier_ranking ol li::before {
+  content: counter(item) ". ";
+  counter-increment: item;
+  color: #c92134;
+  font-weight: bold;
+  width: 1.85rem;
+  display: inline-block;
+  font-family: 'serif';
+}
+
+section#bier_ranking ol li span {
+  font-weight: normal;
+}
+
+/* -------------------------------------------------------- Footer styles */
+/* -------------------------------------------------------- */

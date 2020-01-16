@@ -20,6 +20,10 @@ $background_color: #e3d9d2
     padding: 0
 
 
+
+/* -------------------------------------------------------- General styles
+/* --------------------------------------------------------
+
 body
 	background: #d3c0aa url(../images/tile.jpg) repeat
 	font-family: sans-serif
@@ -54,13 +58,14 @@ a
 	text-decoration: none
 	color: $main_color
 	font-weight: bold
+	&:hover
+		background: #000
 	&.regular_btn
 		background: $main_color
 		padding: .5rem 1rem
 		line-height: 2.5rem
 		color: #fff
-		&:hover
-			background: #000
+
 
 
 img
@@ -76,55 +81,66 @@ article
 
 
 
+/* -------------------------------------------------------- Header styles
+/* --------------------------------------------------------
+
 header
 	background: url(../images/beurs_logo.svg) no-repeat center center
 	background-size: 250px
 	min-height: 10rem
 	margin: 1rem 0 0
 
-	nav
-		ul
-			li
-				#menu_toggle
-					position: absolute
-					z-index: 100
-					top: 1rem
-					right: 1rem
-					color: #000
 
-		ul
-			li
-				ul
-					transition: .6s height ease
-					height: 0px
-					overflow: hidden
-					background: $main_color
-					position: relative
+/* ------------- Navigation styles
+/* -------------------------------
+
+nav
+	ul
+		li
+			#menu_toggle
+				position: absolute
+				z-index: 100
+				top: 1rem
+				right: 1rem
+				color: #000
+
+	ul
+		li
+			ul
+				transition: .6s height ease
+				height: 0px
+				overflow: hidden
+				background: $main_color
+				position: relative
+				display: block
+				top: -1rem
+				left: 0
+				width: 100%
+				&.active
+					height: 450px
+				li
+				a
+					color: #fff
 					display: block
-					top: -1rem
-					left: 0
 					width: 100%
-					&.active
-						height: 450px
-					li
-					a
-						color: #fff
-						display: block
-						width: 100%
-						padding: 1rem 1rem
-						&:hover
-							background: #000
+					padding: 1rem 1rem
+					&:hover
+						background: #000
 
 
-
+/* -------------------------------------------------------- Main styles
+/* --------------------------------------------------------
 
 main
 	padding: 1rem
+	max-width: 1200px
+	margin: 0 auto
 
 
 
 
-
+/* ------------- Bier ranking styles
+/* ---------------------------------
 
 section#bier_ranking
 	background: $background_color
@@ -154,3 +170,13 @@ section#bier_ranking
 				font-family: 'serif'
 			span
 				font-weight: normal
+
+
+
+
+
+
+
+
+/* -------------------------------------------------------- Footer styles
+/* --------------------------------------------------------
