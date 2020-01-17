@@ -106,7 +106,7 @@ nav ul li #menu_toggle.active {
 }
 
 nav ul li ul {
-  transition: .6s all ease;
+  transition: .3s height ease;
   height: 0px;
   overflow: hidden;
   position: relative;
@@ -184,6 +184,45 @@ main {
   section#hero {
     display: flex;
   }
+}
+
+/* ------------- contact info styles */
+/* --------------------------------- */
+article#contact {
+  display: flex;
+}
+
+article#contact img {
+  width: 80%;
+}
+
+article#contact #contact_info {
+  width: 20%;
+}
+
+article#contact #contact_info a {
+  height: 24px;
+  width: 24px;
+}
+
+article#contact #contact_info a.facebook {
+  background: url(../images/facebook.svg) no-repeat;
+}
+
+article#contact #telefoon_nummer {
+  border: 3px solid #c92134;
+  position: relative;
+  min-width: 12rem;
+  margin-left: -6rem;
+  text-align: center;
+}
+
+article#contact #telefoon_nummer p {
+  background: #e3d9d2;
+  margin: .3rem;
+  font-family: 'serif';
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 /* ------------- Bier ranking styles */
