@@ -41,6 +41,7 @@ body::after {
 h1 {
   font-size: 36px;
   font-family: 'serif';
+  padding: 1rem 0;
 }
 
 a {
@@ -76,6 +77,18 @@ article p {
   padding: 1rem 0;
   line-height: 1.5rem;
   font-size: .8rem;
+}
+
+.dividerline {
+  max-width: 20rem;
+  min-width: 10rem;
+  border-top: 5px dotted #bca79a;
+  margin: 4rem auto 3rem;
+  z-index: -15;
+}
+
+.fullwidth {
+  max-width: 100vw;
 }
 
 /* -------------------------------------------------------- Header styles */
@@ -184,6 +197,12 @@ main {
   section#hero {
     display: flex;
   }
+  section#hero article:first-of-type {
+    width: 40%;
+  }
+  section#hero article {
+    padding: 2rem 2rem 2rem 0rem;
+  }
 }
 
 /* ------------- contact info styles */
@@ -198,15 +217,18 @@ article#contact img {
 
 article#contact #contact_info {
   width: 20%;
+  text-align: right;
 }
 
 article#contact #contact_info a {
-  height: 24px;
-  width: 24px;
+  display: inline-flex;
+  fill: #c92134;
 }
 
-article#contact #contact_info a.facebook {
-  background: url(../images/facebook.svg) no-repeat;
+article#contact #contact_info a svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: .6rem .2rem;
 }
 
 article#contact #telefoon_nummer {
@@ -223,6 +245,14 @@ article#contact #telefoon_nummer p {
   font-family: 'serif';
   font-weight: bold;
   font-size: 1.2rem;
+  padding: .6rem;
+}
+
+@media (min-width: 900px) {
+  #contact_info {
+    background: url(../images/3512ag.svg) no-repeat bottom right;
+    background-size: 6rem;
+  }
 }
 
 /* ------------- Bier ranking styles */
@@ -269,3 +299,21 @@ section#bier_ranking ol li span {
 
 /* -------------------------------------------------------- Footer styles */
 /* -------------------------------------------------------- */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+footer p {
+  color: #bca79a;
+}
+
+footer p a {
+  display: inline;
+}
+
+footer a {
+  padding-top: 1.5rem;
+  display: block;
+  color: #bca79a;
+}
