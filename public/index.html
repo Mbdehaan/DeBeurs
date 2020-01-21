@@ -14,20 +14,21 @@
 </head>
 <body>
 
+
 <header>
 	<nav>
 		<ul>
 			<li><a href="#" id="menu_toggle">MENU</a><!-- Toggle -->
 				<ul id="mobile_menu">
-					<li><a href="#" class="active">Home</a></li>
+					<li><a href="index.html">Home</a></li>
 					<li><a href="#">Reserveren</a></li>
 					<li><a href="#">Menu</a></li>
 					<li><a href="#">Dansen</a></li>
 					<li><a href="#">Foto's</a></li>
 					<li><a href="#">De Beurs</a></li>
 					<li><a href="#">Werken Bij</a></li>
-					<li><a href="#">Contact</a></li>
-					<li><a href="#">En</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li class="language"><a href="#">En</a></li>
 				</ul>
 			</li>
 		</ul>
@@ -51,9 +52,9 @@
 
 		<!-- Contact section -->
 		<article id="contact">
-
-			<img src="images/burger_foto.jpg" alt="De Heerlijke Beurs Burger van de Josper Grill.">
-
+			<div class="image_container">
+				<img src="images/burger_foto.jpg" alt="De Heerlijke Beurs Burger van de Josper Grill.">
+			</div>
 			<div id="contact_info">
 					<a href="#">
 						<svg height="682.66669pt" viewBox="-21 -21 682.66669 682.66669" width="682.66669pt" xmlns="http://www.w3.org/2000/svg"><path d="m604.671875 0h-569.375c-19.496094.0117188-35.30078125 15.824219-35.296875 35.328125v569.375c.0117188 19.496094 15.824219 35.300781 35.328125 35.296875h306.546875v-247.5h-83.125v-96.875h83.125v-71.292969c0-82.675781 50.472656-127.675781 124.222656-127.675781 35.324219 0 65.679688 2.632812 74.527344 3.808594v86.410156h-50.855469c-40.125 0-47.894531 19.066406-47.894531 47.050781v61.699219h95.9375l-12.5 96.875h-83.4375v247.5h162.796875c19.507813.003906 35.324219-15.804688 35.328125-35.3125 0-.003906 0-.007812 0-.015625v-569.375c-.007812-19.496094-15.824219-35.30078125-35.328125-35.296875zm0 0"/></svg>
@@ -73,47 +74,61 @@
 	<div class="dividerline"></div>
 
 
-	<!-- Menukaart section -->
-	<article>
-		<h1>Proef de gerechten van de Turnpike smoker & Josper Grill</h1>
+<!-- Menukaart section -->
+	<section id="menukaart">
+		<div class="image_container">
+			<img src="images/20170621_rubenmay_011-_ru29190cropped.jpg" alt="" class="mobile_size">
+			<img src="images/20170621_rubenmay_011-_ru29190.jpg" alt="" class="desktop_size">
+		</div>
+		<article>
 
-		<p>Bij de verbouwing in 2017 heeft de keuken van De Beurs een flinke upgrade gekregen door de toevoeging van een Turnpike smoker en een Josper grill. Onze Josper grill is een echte Spaanse houtskoolgestookte oven, er komt geen gas of elektra aan te pas! We stoken hem op tot maar liefst 400° C. Hoogwaardige houtskool en een perfect regelbare doorstroming van hete lucht zorgen ervoor dat elk stuk vlees, vis of gevogelte dat in de Josper bereid wordt een authentieke, sappige grillsmaak heeft.</p>
-		<p> De Turnpike is een op maat gemaakte houtskoolgestookte smoker. Hierop bereiden wij gerechten met een indirecte grillmethode, waarbij het eten over een lange periode op lage temperatuur gegaard wordt. Dit geeft een unieke rook- en smaakoverdracht en die echte juicy BBQ flavour.</p>
+			<h1>Proef de gerechten van de Turnpike smoker & Josper Grill</h1>
 
-		<a href="#" class="regular_btn">Bekijk onze menukaart</a>
-	</article>
+			<p>Bij de verbouwing in 2017 heeft de keuken van De Beurs een flinke upgrade gekregen door de toevoeging van een Turnpike smoker en een Josper grill. Onze Josper grill is een echte Spaanse houtskoolgestookte oven, er komt geen gas of elektra aan te pas! We stoken hem op tot maar liefst 400° C. Hoogwaardige houtskool en een perfect regelbare doorstroming van hete lucht zorgen ervoor dat elk stuk vlees, vis of gevogelte dat in de Josper bereid wordt een authentieke, sappige grillsmaak heeft.</p>
+			<p> De Turnpike is een op maat gemaakte houtskoolgestookte smoker. Hierop bereiden wij gerechten met een indirecte grillmethode, waarbij het eten over een lange periode op lage temperatuur gegaard wordt. Dit geeft een unieke rook- en smaakoverdracht en die echte juicy BBQ flavour.</p>
+
+			<a href="#" class="regular_btn">Bekijk onze menukaart</a>
+		</article>
+		<article id="bier_ranking">
+			<h1>Bier top 6</h1>
+
+			<ol>
+				<li>Heineken Vaasje <span>(5%)</span></li>
+				<li>La Chouffe <span>(8%)</span></li>
+				<li>Affligem Blond <span>(8%)</span></li>
+				<li>Brouwerij 't IJ Ijwit <span>(6.5%)</span></li>
+				<li>Brand Weizen <span>(5.1%)</span></li>
+				<li>Wieckse Rosé <span>(4%)</span></li>
+			</ol>
+
+			<a href="#">> Reserveer een biertafel</a>
+		</article>
 
 
-	<!-- Bier ranking section -->
-	<section id="bier_ranking">
-		<h1>Bier top 6</h1>
+		<!-- Bier ranking section -->
 
-		<ol>
-			<li>Heineken Vaasje <span>(5%)</span></li>
-			<li>La Chouffe <span>(8%)</span></li>
-			<li>Affligem Blond <span>(8%)</span></li>
-			<li>Brouwerij 't IJ Ijwit <span>(6.5%)</span></li>
-			<li>Brand Weizen <span>(5.1%)</span></li>
-			<li>Wieckse Rosé <span>(4%)</span></li>
-		</ol>
-
-		<a href="#">> Reserveer een biertafel</a>
 	</section>
+
+
 
 	<!-- terugkomende dividerclass -->
 	<div class="dividerline"></div>
 
 
 	<!-- Zalen informatie section -->
-	<article id="zalen_info">
-		<img src="images/shoot_2_20170621_rubenmay_007-_ru29177.jpg" alt="Onze zaal op de eerste verdieping.">
+	<section id="zalen_info">
+		<div class="image_container">
+			<img src="images/shoot_2_20170621_rubenmay_007-_ru29177.jpg" alt="Onze zaal op de eerste verdieping.">
+		</div>
+		<article>
+			<h1>Eerste verdieping</h1>
+			<p>Op de eerste verdieping van het restaurant is ruimte voor 56 (diner) tot 110 mensen (borrel). De ruimte is sfeervol verlicht, zit vol authentieke details en heeft een eigen bar. Deze ruimte is exclusief af te huren. Ga voor meer informatie naar onze brochure!</p>
 
-		<h1>Eerste verdieping</h1>
-		<p>Op de eerste verdieping van het restaurant is ruimte voor 56 (diner) tot 110 mensen (borrel). De ruimte is sfeervol verlicht, zit vol authentieke details en heeft een eigen bar. Deze ruimte is exclusief af te huren. Ga voor meer informatie naar onze brochure!</p>
-
-		<a href="#">> Meer informatie</a>
-	</article>
+			<a href="#">> Meer informatie</a>
+		</article>
+	</section>
 </main>
+
 
 <!-- terugkomende dividerclass: hier ook fullwidth, om de lijn de volledige breedte mee te geven. -->
 <div class="dividerline fullwidth"></div>
@@ -129,7 +144,12 @@
 </footer>
 
 
+
 <script src="js/script.js"></script>
+<link rel="stylesheet" href="https://use.typekit.net/azm6chp.css"> <!-- Rockwell Std Bold -->
+<link rel="stylesheet" href="https://use.typekit.net/azm6chp.css"> <!-- open Sans regular, italic & bold -->
+
+
 
 </body>
 </html>

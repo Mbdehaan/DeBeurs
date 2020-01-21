@@ -10,7 +10,7 @@
 /* -------------------------------------------------------- */
 body {
   background: #d3c0aa url(../images/tile.jpg) repeat;
-  font-family: sans-serif;
+  font-family: open-sans, sans-serif;
   font-size: 16px;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -40,7 +40,8 @@ body::after {
 
 h1 {
   font-size: 36px;
-  font-family: 'serif';
+  font-family: rockwell, sans-serif;
+  font-weight: 700;
   padding: 1rem 0;
 }
 
@@ -58,6 +59,8 @@ a.regular_btn {
   background: #c92134;
   padding: .5rem 1rem;
   line-height: 2.5rem;
+  font-family: rockwell, sans-serif;
+  font-size: 1.25rem;
   color: #fff;
 }
 
@@ -66,11 +69,11 @@ a.regular_btn:hover {
 }
 
 img {
-  max-width: 90vw;
+  max-width: 100%;
 }
 
 article {
-  padding: 1rem 0;
+  padding: 1rem;
 }
 
 article p {
@@ -80,7 +83,7 @@ article p {
 }
 
 .dividerline {
-  max-width: 20rem;
+  max-width: 50%;
   min-width: 10rem;
   border-top: 5px dotted #bca79a;
   margin: 4rem auto 3rem;
@@ -134,19 +137,21 @@ nav ul li ul.active {
   padding-top: 2rem;
 }
 
-nav ul li ul a {
+nav ul li ul li a {
   color: #fff;
   display: block;
   width: 100%;
   padding: 1rem 1rem;
+  text-transform: uppercase;
+  font-size: .9rem;
 }
 
-nav ul li ul a:hover, nav ul li ul a.active {
+nav ul li ul li a:hover, nav ul li ul li a.active {
   background: #000;
   color: #fff;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 780px) {
   header {
     background-position: center center;
     background-size: 350px;
@@ -155,6 +160,7 @@ nav ul li ul a:hover, nav ul li ul a.active {
   }
   nav {
     max-width: 1200px;
+    width: 90%;
     position: relative;
     margin: 0 auto;
     top: 150px;
@@ -171,17 +177,48 @@ nav ul li ul a:hover, nav ul li ul a.active {
     display: inline-block;
     overflow: visible;
     top: 0;
-    text-align: center;
+    text-align: left;
   }
   nav ul li ul li {
     display: inline-block;
   }
+  nav ul li ul li.language {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  nav ul li ul li.language a {
+    transition: background 0.1s ease-in;
+    border-left: 1px solid #fff;
+  }
+  nav ul li ul li.language a:hover {
+    position: relative;
+    top: -.5rem;
+    right: -1rem;
+    padding: 1.5rem 1.5rem;
+  }
   nav ul li ul li a {
-    transition: .4s all ease;
+    transition: .2s background ease-in;
+    font-size: .7rem;
+    padding: 1rem .5rem;
   }
   nav ul li ul li a:hover, nav ul li ul li a.active {
-    top: -.5rem;
+    top: -.3rem;
     position: relative;
+  }
+}
+
+@media (min-width: 980px) {
+  nav {
+    width: 90%;
+    max-width: 1200px;
+  }
+  nav ul li ul {
+    text-align: center;
+  }
+  nav ul li ul li a {
+    font-size: .9rem;
+    padding: 1rem;
   }
 }
 
@@ -190,10 +227,11 @@ nav ul li ul a:hover, nav ul li ul a.active {
 main {
   padding: 1rem;
   max-width: 1200px;
+  width: 90%;
   margin: 0 auto;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 780px) {
   section#hero {
     display: flex;
   }
@@ -209,10 +247,14 @@ main {
 /* --------------------------------- */
 article#contact {
   display: flex;
+  overflow: hidden;
 }
 
 article#contact img {
-  width: 80%;
+  display: block;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
 }
 
 article#contact #contact_info {
@@ -242,13 +284,13 @@ article#contact #telefoon_nummer {
 article#contact #telefoon_nummer p {
   background: #e3d9d2;
   margin: .3rem;
-  font-family: 'serif';
+  font-family: rockwell, sans-serif;
   font-weight: bold;
   font-size: 1.2rem;
   padding: .6rem;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 780px) {
   #contact_info {
     background: url(../images/3512ag.svg) no-repeat bottom right;
     background-size: 6rem;
@@ -257,48 +299,90 @@ article#contact #telefoon_nummer p {
 
 /* ------------- Bier ranking styles */
 /* --------------------------------- */
-section#bier_ranking {
+#bier_ranking {
   background: #e3d9d2;
   border-left: 0.5rem solid #c92134;
   padding: 1rem;
   margin: 2rem 0;
+  height: 23rem;
+  margin-left: auto;
+  order: 2;
 }
 
-section#bier_ranking::after {
-  content: '';
-  height: 50px;
-  width: 50vw;
-  border-bottom: 5px dotted #c92134;
-}
-
-section#bier_ranking ol {
+#bier_ranking ol {
   counter-reset: item;
   list-style: none;
   margin: 1rem 0;
 }
 
-section#bier_ranking ol li {
+#bier_ranking ol li {
   line-height: 1.85rem;
   font-weight: bold;
   font-size: .85rem;
 }
 
-section#bier_ranking ol li::before {
+#bier_ranking ol li::before {
   content: counter(item) ". ";
   counter-increment: item;
   color: #c92134;
   font-weight: bold;
   width: 1.85rem;
   display: inline-block;
-  font-family: 'serif';
+  font-family: rockwell, sans-serif;
 }
 
-section#bier_ranking ol li span {
+#bier_ranking ol li span {
   font-weight: normal;
+}
+
+.desktop_size {
+  display: none;
+}
+
+.mobile_size {
+  display: block;
+}
+
+@media (min-width: 780px) {
+  section#menukaart {
+    display: flex;
+  }
+  section#menukaart .image_container {
+    width: 70%;
+  }
+  section#menukaart .image_container img {
+    width: 100%;
+  }
+  section#menukaart .image_container img.mobile_size {
+    display: none;
+  }
+  section#menukaart .image_container img.desktop_size {
+    display: block;
+  }
+  section#menukaart article {
+    width: 70%;
+    overflow: hidden;
+  }
 }
 
 /* -------------------------------------------------------- Footer styles */
 /* -------------------------------------------------------- */
+@media (min-width: 780px) {
+  section#zalen_info {
+    display: flex;
+  }
+  section#zalen_info .image_container {
+    width: 35%;
+  }
+  section#zalen_info article {
+    width: 65%;
+    padding-top: 0;
+  }
+  section#zalen_info article h1 {
+    padding-bottom: 0;
+  }
+}
+
 footer {
   text-align: center;
   padding: 2rem 1rem;
