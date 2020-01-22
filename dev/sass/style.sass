@@ -7,10 +7,10 @@
 //  Gebruikte tech:
 //  Gulp, Sass, FileInclude & BrowserSync
 
-$max_width: 1200px
-
 $main_color: #c92134
 $background_color: #e3d9d2
+
+$max_width: 1200px
 
 $mobile_breakpoint: 780px
 $tablet_breakpoint: 980px
@@ -35,32 +35,45 @@ body
 	overflow-x: hidden
 	overflow-y: scroll
 
-
-body::before
-	background: #d3c0aa
-	content: ''
-	position: fixed
-	width: 10px
-	height: 100%
-	top: 0
-	left: 0
-	z-index: -10
-
-body::after
+/* lines left and right of viewport */
+body::before, body::after
 	background: #d3c0aa
 	content: ''
 	position: fixed
 	width: 10px
 	height: 100vh
 	top: 0
-	right: 0
 	z-index: -10
+
+body::after
+	right: 0
+body::before
+	left: 0
+
+/* Text styles */
+
+h1, h2, h3, h4
+	font-family: rockwell, sans-serif
+	font-weight: 400
+	padding: 1rem 0
 
 h1
 	font-size: 36px
-	font-family: rockwell, sans-serif
-	font-weight: 700
-	padding: 1rem 0
+h2
+	font-size: 32px
+h3
+	font-size: 26px
+h4
+	font-size: 22px
+
+article
+	padding: 1rem
+	p
+		padding: .5em 0em
+		line-height: 1.5rem
+		font-size: .8rem
+
+/* Acnhor tags & buttons */
 
 a
 	text-decoration: none
@@ -78,19 +91,23 @@ a
 		&:hover
 			background: #000
 
+/* social icons *///I
+
+a svg
+	width: 36px
+	height: auto
+	fill: $main_color
+	&:hover
+		fill: #000
+
+/* image styles */
 
 img
-	max-width: 100%
+	width: 100%
 
 
-article
-	padding: 1rem
-	p
-		padding: 1rem 0
-		line-height: 1.5rem
-		font-size: .8rem
 
-
+/* divider styles */
 
 .dividerline
 	max-width: 50%
@@ -103,8 +120,18 @@ article
 
 
 
-
-
+#telefoon_nummer
+	border: 3px solid $main_color
+	position: relative
+	text-align: center
+	max-width: 300px
+	p
+		background: $background_color
+		margin: .3rem
+		font-family: rockwell, sans-serif
+		font-weight: bold
+		font-size: 1.2rem
+		padding: .6rem
 
 
 /* -------------------------------------------------------- Header styles
@@ -153,16 +180,15 @@ nav
 						padding: 1rem 1rem
 						text-transform: uppercase
 						font-size: .9rem
+						font-weight: 400
+						font-family: 'open-sans-condensed', sans-serif;
 						&:hover, &.active
 							background: #000
 							color: #fff
 
+//tablet & desktop navigation
+//780px and up - tablet format
 
-
-
-
-
-//  780px and up
 @media (min-width: $mobile_breakpoint)
 
 	header
@@ -212,8 +238,8 @@ nav
 								top: -.3rem
 								position: relative
 
+//980px and up - desktop format
 
-// 980px and up
 @media (min-width: $tablet_breakpoint)
 	nav
 		width: 90%
@@ -232,35 +258,59 @@ nav
 
 
 main
-	padding: 1rem
 	max-width: $max_width
 	width: 90%
 	margin: 0 auto
 
 
+//780px and up - tablet format
 
 @media (min-width: $mobile_breakpoint)
 	section#hero
 		display: flex
 		article:first-of-type
-			width: 40%
-		article
-			padding: 2rem 2rem 2rem 0rem
+			width: 35%
+			padding: 0 1.5rem 0 0
+			min-width: 300px
+		article:last-of-type
+			width: 60%
+			margin-left: auto
+			figure
+				overflow: hidden
+				min-height: 300px
+				img
+					min-width: 600px
 
 
 /* ------------- contact info styles
 /* ---------------------------------
 
+/* line next to social buttons on the contact page */
+#divderline_socialmedia
+	width: 100%
+	display: inline-flex
+	a
+		width: 5%
+		min-width: 25px
+		margin-left: auto
+		svg
+			width: 100%
+#divderline
+	margin-top: 10px
+	width: 85%
+	height: 10px
+	border-bottom: 5px dotted #bca79a
+
+
+//               on homepage!
 article#contact
 	display: flex
 	overflow: hidden
-	img
-		display: block
-		width: 100%
-		height: auto
-		vertical-align: middle
 	#contact_info
-		width: 20%
+		max-height: 350px
+		width: 15%
+		min-width: 80px
+		margin-left: 5%
 		text-align: right
 		a
 			display: inline-flex
@@ -270,31 +320,22 @@ article#contact
 				height: 1.5rem
 				margin: .6rem .2rem
 
-	#telefoon_nummer
-		border: 3px solid $main_color
-		position: relative
-		min-width: 12rem
-		margin-left: -6rem
-		text-align: center
-		p
-			background: $background_color
-			margin: .3rem
-			font-family: rockwell, sans-serif
-			font-weight: bold
-			font-size: 1.2rem
-			padding: .6rem
+		#telefoon_nummer
+			min-width: 12rem
+			margin-left: -7rem
 
+//780px and up - tablet format
 
 @media (min-width: $mobile_breakpoint)
 	#contact_info
 		background: url(../images/3512ag.svg) no-repeat bottom right
-		background-size: 6rem
+		background-size: contain
 
 
 /* ------------- Bier ranking styles
 /* ---------------------------------
 
-#bier_ranking
+article#bier_ranking
 	background: $background_color
 	border-left: .5rem solid $main_color
 	padding: 1rem
@@ -325,36 +366,114 @@ article#contact
 .mobile_size
 	display: block
 
+
+//780px and up - tablet format
+
 @media (min-width: $mobile_breakpoint)
 	section#menukaart
 		display: flex
-		.image_container
-			width: 70%
+		figure
+			width: 50%
+			display: none
 			img
 				width: 100%
-				&.mobile_size
-					display: none
-				&.desktop_size
+				.desktop_size
 					display: block
+		.mobile_size
+			display: block
 		article
 			width: 70%
 			overflow: hidden
+		article#bier_ranking
+			width: 60%
+			max-width: 250px
 
 
-/* -------------------------------------------------------- Footer styles
-/* --------------------------------------------------------
+//1200px and up - desktop HD format
 
+@media (min-width: $desktop_breakpoint)
+	section#menukaart
+		figure
+			display: block
+		.mobile_size
+			display: none
+
+		.desktop_size
+			display: block
+
+
+/* ------------- zalen info styles
+/* ---------------------------------
+
+//780px and up - tablet format
 
 @media (min-width: $mobile_breakpoint)
 	section#zalen_info
 		display: flex
-		.image_container
+		figure
 			width: 35%
 		article
 			width: 65%
 			padding-top: 0
 			h1
 				padding-bottom: 0
+
+
+
+
+
+section#contact_form
+	display: flex
+	article:first-of-type
+		width: 40%
+	article:last-of-type
+		width: 60%
+
+	input[type="text"], textarea
+		background-color: #fff
+		color: #555
+		border: 1px solid #d3c0aa
+		width: 100%
+		margin-top: 10px
+		padding: 20px 20px
+		font-size: .9rem
+		&:focus
+			border: 1px solid #d3c0aa
+			outline: none
+	textarea
+		height: 200px
+
+	button
+		border: none
+		background: $main_color
+		padding: .1rem 1rem
+		line-height: 2rem
+		font-family: rockwell, sans-serif
+		font-size: 1rem
+		color: #fff
+		float: right
+		margin-top: 10px
+		cursor: pointer
+		&:hover
+			background: #000
+
+
+section#map
+	margin-top: 50px
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------------------- Footer styles
+/* --------------------------------------------------------
+
+
 
 
 footer

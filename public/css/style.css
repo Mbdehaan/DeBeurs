@@ -16,35 +16,59 @@ body {
   overflow-y: scroll;
 }
 
-body::before {
-  background: #d3c0aa;
-  content: '';
-  position: fixed;
-  width: 10px;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -10;
-}
-
-body::after {
+/* lines left and right of viewport */
+body::before, body::after {
   background: #d3c0aa;
   content: '';
   position: fixed;
   width: 10px;
   height: 100vh;
   top: 0;
-  right: 0;
   z-index: -10;
+}
+
+body::after {
+  right: 0;
+}
+
+body::before {
+  left: 0;
+}
+
+/* Text styles */
+h1, h2, h3, h4 {
+  font-family: rockwell, sans-serif;
+  font-weight: 400;
+  padding: 1rem 0;
 }
 
 h1 {
   font-size: 36px;
-  font-family: rockwell, sans-serif;
-  font-weight: 700;
-  padding: 1rem 0;
 }
 
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 26px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+article {
+  padding: 1rem;
+}
+
+article p {
+  padding: .5em 0em;
+  line-height: 1.5rem;
+  font-size: .8rem;
+}
+
+/* Acnhor tags & buttons */
 a {
   text-decoration: none;
   color: #c92134;
@@ -68,20 +92,23 @@ a.regular_btn:hover {
   background: #000;
 }
 
+/* social icons * */
+a svg {
+  width: 36px;
+  height: auto;
+  fill: #c92134;
+}
+
+a svg:hover {
+  fill: #000;
+}
+
+/* image styles */
 img {
-  max-width: 100%;
+  width: 100%;
 }
 
-article {
-  padding: 1rem;
-}
-
-article p {
-  padding: 1rem 0;
-  line-height: 1.5rem;
-  font-size: .8rem;
-}
-
+/* divider styles */
 .dividerline {
   max-width: 50%;
   min-width: 10rem;
@@ -92,6 +119,22 @@ article p {
 
 .fullwidth {
   max-width: 100vw;
+}
+
+#telefoon_nummer {
+  border: 3px solid #c92134;
+  position: relative;
+  text-align: center;
+  max-width: 300px;
+}
+
+#telefoon_nummer p {
+  background: #e3d9d2;
+  margin: .3rem;
+  font-family: rockwell, sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: .6rem;
 }
 
 /* -------------------------------------------------------- Header styles */
@@ -144,6 +187,8 @@ nav ul li ul li a {
   padding: 1rem 1rem;
   text-transform: uppercase;
   font-size: .9rem;
+  font-weight: 400;
+  font-family: 'open-sans-condensed', sans-serif;
 }
 
 nav ul li ul li a:hover, nav ul li ul li a.active {
@@ -225,7 +270,6 @@ nav ul li ul li a:hover, nav ul li ul li a.active {
 /* -------------------------------------------------------- Main styles */
 /* -------------------------------------------------------- */
 main {
-  padding: 1rem;
   max-width: 1200px;
   width: 90%;
   margin: 0 auto;
@@ -236,29 +280,58 @@ main {
     display: flex;
   }
   section#hero article:first-of-type {
-    width: 40%;
+    width: 35%;
+    padding: 0 1.5rem 0 0;
+    min-width: 300px;
   }
-  section#hero article {
-    padding: 2rem 2rem 2rem 0rem;
+  section#hero article:last-of-type {
+    width: 60%;
+    margin-left: auto;
+  }
+  section#hero article:last-of-type figure {
+    overflow: hidden;
+    min-height: 300px;
+  }
+  section#hero article:last-of-type figure img {
+    min-width: 600px;
   }
 }
 
 /* ------------- contact info styles */
 /* --------------------------------- */
+/* line next to social buttons on the contact page */
+#divderline_socialmedia {
+  width: 100%;
+  display: inline-flex;
+}
+
+#divderline_socialmedia a {
+  width: 5%;
+  min-width: 25px;
+  margin-left: auto;
+}
+
+#divderline_socialmedia a svg {
+  width: 100%;
+}
+
+#divderline {
+  margin-top: 10px;
+  width: 85%;
+  height: 10px;
+  border-bottom: 5px dotted #bca79a;
+}
+
 article#contact {
   display: flex;
   overflow: hidden;
 }
 
-article#contact img {
-  display: block;
-  width: 100%;
-  height: auto;
-  vertical-align: middle;
-}
-
 article#contact #contact_info {
-  width: 20%;
+  max-height: 350px;
+  width: 15%;
+  min-width: 80px;
+  margin-left: 5%;
   text-align: right;
 }
 
@@ -273,33 +346,21 @@ article#contact #contact_info a svg {
   margin: .6rem .2rem;
 }
 
-article#contact #telefoon_nummer {
-  border: 3px solid #c92134;
-  position: relative;
+article#contact #contact_info #telefoon_nummer {
   min-width: 12rem;
-  margin-left: -6rem;
-  text-align: center;
-}
-
-article#contact #telefoon_nummer p {
-  background: #e3d9d2;
-  margin: .3rem;
-  font-family: rockwell, sans-serif;
-  font-weight: bold;
-  font-size: 1.2rem;
-  padding: .6rem;
+  margin-left: -7rem;
 }
 
 @media (min-width: 780px) {
   #contact_info {
     background: url(../images/3512ag.svg) no-repeat bottom right;
-    background-size: 6rem;
+    background-size: contain;
   }
 }
 
 /* ------------- Bier ranking styles */
 /* --------------------------------- */
-#bier_ranking {
+article#bier_ranking {
   background: #e3d9d2;
   border-left: 0.5rem solid #c92134;
   padding: 1rem;
@@ -309,19 +370,19 @@ article#contact #telefoon_nummer p {
   order: 2;
 }
 
-#bier_ranking ol {
+article#bier_ranking ol {
   counter-reset: item;
   list-style: none;
   margin: 1rem 0;
 }
 
-#bier_ranking ol li {
+article#bier_ranking ol li {
   line-height: 1.85rem;
   font-weight: bold;
   font-size: .85rem;
 }
 
-#bier_ranking ol li::before {
+article#bier_ranking ol li::before {
   content: counter(item) ". ";
   counter-increment: item;
   color: #c92134;
@@ -331,7 +392,7 @@ article#contact #telefoon_nummer p {
   font-family: rockwell, sans-serif;
 }
 
-#bier_ranking ol li span {
+article#bier_ranking ol li span {
   font-weight: normal;
 }
 
@@ -347,31 +408,48 @@ article#contact #telefoon_nummer p {
   section#menukaart {
     display: flex;
   }
-  section#menukaart .image_container {
-    width: 70%;
-  }
-  section#menukaart .image_container img {
-    width: 100%;
-  }
-  section#menukaart .image_container img.mobile_size {
+  section#menukaart figure {
+    width: 50%;
     display: none;
   }
-  section#menukaart .image_container img.desktop_size {
+  section#menukaart figure img {
+    width: 100%;
+  }
+  section#menukaart figure img .desktop_size {
+    display: block;
+  }
+  section#menukaart .mobile_size {
     display: block;
   }
   section#menukaart article {
     width: 70%;
     overflow: hidden;
   }
+  section#menukaart article#bier_ranking {
+    width: 60%;
+    max-width: 250px;
+  }
 }
 
-/* -------------------------------------------------------- Footer styles */
-/* -------------------------------------------------------- */
+@media (min-width: 1200px) {
+  section#menukaart figure {
+    display: block;
+  }
+  section#menukaart .mobile_size {
+    display: none;
+  }
+  section#menukaart .desktop_size {
+    display: block;
+  }
+}
+
+/* ------------- zalen info styles */
+/* --------------------------------- */
 @media (min-width: 780px) {
   section#zalen_info {
     display: flex;
   }
-  section#zalen_info .image_container {
+  section#zalen_info figure {
     width: 35%;
   }
   section#zalen_info article {
@@ -383,6 +461,60 @@ article#contact #telefoon_nummer p {
   }
 }
 
+section#contact_form {
+  display: flex;
+}
+
+section#contact_form article:first-of-type {
+  width: 40%;
+}
+
+section#contact_form article:last-of-type {
+  width: 60%;
+}
+
+section#contact_form input[type="text"], section#contact_form textarea {
+  background-color: #fff;
+  color: #555;
+  border: 1px solid #d3c0aa;
+  width: 100%;
+  margin-top: 10px;
+  padding: 20px 20px;
+  font-size: .9rem;
+}
+
+section#contact_form input[type="text"]:focus, section#contact_form textarea:focus {
+  border: 1px solid #d3c0aa;
+  outline: none;
+}
+
+section#contact_form textarea {
+  height: 200px;
+}
+
+section#contact_form button {
+  border: none;
+  background: #c92134;
+  padding: .1rem 1rem;
+  line-height: 2rem;
+  font-family: rockwell, sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  float: right;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+section#contact_form button:hover {
+  background: #000;
+}
+
+section#map {
+  margin-top: 50px;
+}
+
+/* -------------------------------------------------------- Footer styles */
+/* -------------------------------------------------------- */
 footer {
   text-align: center;
   padding: 2rem 1rem;

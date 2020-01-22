@@ -8,4 +8,3 @@ document.getElementById('menu_toggle').onclick = function() {
 		this.innerHTML = "MENU";
 	}
 };
-
