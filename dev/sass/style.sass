@@ -155,9 +155,11 @@ nav
 			#menu_toggle
 				position: absolute
 				z-index: 100
-				top: 2rem
-				right: 1.5rem
-				color: #000
+				top: 1.5rem
+				right: 1rem
+				color: #fff
+				padding: .5rem
+				background: $main_color
 				&.active
 					color: #fff
 			ul
@@ -423,12 +425,11 @@ article#bier_ranking
 
 
 section#contact_form
-	display: flex
+	display: block
 	article:first-of-type
-		width: 40%
+		width: 100%
 	article:last-of-type
-		width: 60%
-
+		width: 100%
 	input[type="text"], textarea
 		background-color: #fff
 		color: #555
@@ -461,8 +462,14 @@ section#contact_form
 section#map
 	margin-top: 50px
 
+@media (min-width: $mobile_breakpoint)
 
-
+	section#contact_form
+		display: flex
+		article:first-of-type
+			width: 40%
+		article:last-of-type
+			width: 60%
 
 
 

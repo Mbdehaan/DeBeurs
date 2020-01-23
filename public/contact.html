@@ -14,7 +14,6 @@
 </head>
 <body>
 
-
 <header>
 	<nav>
 		<ul>
@@ -27,14 +26,13 @@
 					<li><a href="#">Foto's</a></li>
 					<li><a href="#">De Beurs</a></li>
 					<li><a href="#">Werken Bij</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<li><a href="contact.html" class="active">Contact</a></li>
 					<li class="language"><a href="#">En</a></li>
 				</ul>
 			</li>
 		</ul>
 	</nav>
 </header>
-
 
 
 
@@ -60,6 +58,8 @@
 		<p><a href="#">Privacyverklaring</a></p>
 
 		</article>
+
+
 		<article>
 			<figure>
 				<img src="images/shoot_2_20170621_rubenmay_033-_ru29256.jpg" alt="Gezellige sfeerverlichting bij de Beurs Utrecht">
@@ -120,13 +120,13 @@
 		<article>
 			<h1>Contact</h1>
 			<form action="">
-				<input type="text" name="Naam" id="Naam" placeholder="Naam">
+				<input type="text" name="Naam" id="Naam" placeholder="Naam" required>
 
-				<input type="text" name="email" id="email" placeholder="Email">
+				<input type="text" name="email" id="email" placeholder="Email" required>
 
-				<input type="text" name="telefoon" id="telefoon" placeholder="Telefoon">
+				<input type="text" name="telefoon" id="telefoon" placeholder="Telefoon" required>
 
-				<textarea name="bericht" id="bericht" placeholder="Bericht"></textarea>
+				<textarea name="bericht" id="bericht" placeholder="Bericht" required></textarea>
 
 				<button type="submit" class="regular_btn">Verzenden</button>
 

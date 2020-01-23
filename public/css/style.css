@@ -155,9 +155,11 @@ nav {
 nav ul li #menu_toggle {
   position: absolute;
   z-index: 100;
-  top: 2rem;
-  right: 1.5rem;
-  color: #000;
+  top: 1.5rem;
+  right: 1rem;
+  color: #fff;
+  padding: .5rem;
+  background: #c92134;
 }
 
 nav ul li #menu_toggle.active {
@@ -462,15 +464,15 @@ article#bier_ranking ol li span {
 }
 
 section#contact_form {
-  display: flex;
+  display: block;
 }
 
 section#contact_form article:first-of-type {
-  width: 40%;
+  width: 100%;
 }
 
 section#contact_form article:last-of-type {
-  width: 60%;
+  width: 100%;
 }
 
 section#contact_form input[type="text"], section#contact_form textarea {
@@ -511,6 +513,18 @@ section#contact_form button:hover {
 
 section#map {
   margin-top: 50px;
+}
+
+@media (min-width: 780px) {
+  section#contact_form {
+    display: flex;
+  }
+  section#contact_form article:first-of-type {
+    width: 40%;
+  }
+  section#contact_form article:last-of-type {
+    width: 60%;
+  }
 }
 
 /* -------------------------------------------------------- Footer styles */

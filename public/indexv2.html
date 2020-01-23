@@ -2,21 +2,25 @@
 <html lang="en">
 <head>
 
+     <!-- Recreated HTML with the following guidelines -->
+     <!-- https://www.freecodecamp.org/news/css-naming-conventions-that-will-save-you-hours-of-debugging-35cea737d849/ -->
+     <!-- http://getbem.com/ -->
 
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/revised.css">
 
-	<title>De Beurs Utrecht</title>
+	<title>De Beurs Utrecht - MBdeHaan</title>
 </head>
 <body>
 
 
+
 <header>
-	<nav>
+	<nav id="main_navigation" role="navigation">
 		<ul>
 			<li><a href="#" id="menu_toggle">MENU</a><!-- Toggle -->
 				<ul id="mobile_menu">
@@ -28,45 +32,44 @@
 					<li><a href="#">De Beurs</a></li>
 					<li><a href="#">Werken Bij</a></li>
 					<li><a href="contact.html">Contact</a></li>
-					<li class="language"><a href="#">En</a></li>
+					<li class="language_btn"><a href="#">En</a></li>
 				</ul>
 			</li>
 		</ul>
 	</nav>
 </header>
-	
-	
 
 
 <main>
 
-	<!-- Reserveren section -->
-	<section id="hero">
-		<article id="hero_post">
+
+	<section>
+
+		<article>
 			<h1>Sinds 1996 op De Neude in Utrecht.</h1>
 			<p>
 				De Beurs: al sinds 1996 gevestigd in de vier markante rode panden aan de Neude en sindsdien een begrip in Utrecht. Wij voorzien onze gasten van een lekkere lunch, een sfeervol diner en natuurlijk een gezellige borrel. Op donderdag, vrijdag en zaterdag gaan de voetjes van de vloer vanaf 23:30u en kun je komen dansen op de hits die worden gedraaid door onze DJ's! In de zomer kunt u tevens plaatsnemen op ons grote - zonovergoten -  terras op het plein.
 			</p>
-			<a href="#" class="regular_btn">Reserveren</a>
+			<a href="#" class="btn btn_primary--red">Reserveren</a>
 		</article>
 
-		<!-- Contact section -->
-		<article id="contact">
-			<figure>
-				<img src="images/burger_foto.jpg" alt="De Heerlijke Beurs Burger van de Josper Grill.">
-			</figure>
-			<div id="contact_info">
-					<a href="#" id="facebook">
+
+		<article>
+               <figure><img src="images/burger_foto.jpg" alt="De Heerlijke Beurs Burger van de Josper Grill."></figure>
+
+			<div class="contact_details">
+					<a href="#" class="facebook_btn--red"">
 						<svg height="682.66669pt" viewBox="-21 -21 682.66669 682.66669" width="682.66669pt" xmlns="http://www.w3.org/2000/svg"><path d="m604.671875 0h-569.375c-19.496094.0117188-35.30078125 15.824219-35.296875 35.328125v569.375c.0117188 19.496094 15.824219 35.300781 35.328125 35.296875h306.546875v-247.5h-83.125v-96.875h83.125v-71.292969c0-82.675781 50.472656-127.675781 124.222656-127.675781 35.324219 0 65.679688 2.632812 74.527344 3.808594v86.410156h-50.855469c-40.125 0-47.894531 19.066406-47.894531 47.050781v61.699219h95.9375l-12.5 96.875h-83.4375v247.5h162.796875c19.507813.003906 35.324219-15.804688 35.328125-35.3125 0-.003906 0-.007812 0-.015625v-569.375c-.007812-19.496094-15.824219-35.30078125-35.328125-35.296875zm0 0"/></svg>
-					</a><!-- ik gebruik een class om de svg kleur aan te kunnen passen. bij een img werkt dat niet. -->
-					<a href="#" id="email">
+					</a>
+					<a href="#" class="email_btn--red">
 						<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512; color: #c92134" xml:space="preserve"><g><g><path d="M467,61H45c-6.927,0-13.412,1.703-19.279,4.51L255,294.789l51.389-49.387c0,0,0.004-0.005,0.005-0.007c0.001-0.002,0.005-0.004,0.005-0.004L486.286,65.514C480.418,62.705,473.929,61,467,61z"/></g></g><g><g><path d="M507.496,86.728L338.213,256.002L507.49,425.279c2.807-5.867,4.51-12.352,4.51-19.279V106C512,99.077,510.301,92.593,507.496,86.728z"/></g></g><g><g><path d="M4.51,86.721C1.703,92.588,0,99.073,0,106v300c0,6.923,1.701,13.409,4.506,19.274L173.789,256L4.51,86.721z"/></g></g><g><g><path d="M317.002,277.213l-51.396,49.393c-2.93,2.93-6.768,4.395-10.605,4.395s-7.676-1.465-10.605-4.395L195,277.211L25.714,446.486C31.582,449.295,38.071,451,45,451h422c6.927,0,13.412-1.703,19.279-4.51L317.002,277.213z"/></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
 					</a>
-				<div id="telefoon_nummer">
+				<div class="contact_details--tel_nr">
 					<p>Tel: 030-2333007</p>
 				</div>
 			</div>
-		</article>
+          </article>
+
 	</section>
 
 
